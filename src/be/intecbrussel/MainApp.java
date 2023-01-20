@@ -16,7 +16,7 @@ public class MainApp {
 
         int jaar = 1900;
 
-        if (jaar % 4 == 0 && (jaar % 100 != 0 || jaar % 400 == 0 )) {
+        if (jaar % 4 == 0 && (jaar % 100 != 0 || jaar % 400 == 0)) {
             System.out.println(jaar + " is een schrikkeljaar");
         } else {
             System.out.println(jaar + " is geen schrikkeljaar");
@@ -24,7 +24,7 @@ public class MainApp {
 
         System.out.println("---- Oefening 3 ----");
 
-        System.out.println(jaar % 4 == 0 && ( jaar % 100 != 0 || jaar % 400 == 0 ) ? jaar + " is een schrikkeljaar" : jaar + " is geen schrikkeljaar");
+        System.out.println(jaar % 4 == 0 && (jaar % 100 != 0 || jaar % 400 == 0) ? jaar + " is een schrikkeljaar" : jaar + " is geen schrikkeljaar");
 
         System.out.println("---- Github oefening ----");
 
@@ -55,6 +55,35 @@ public class MainApp {
         System.out.println("---- Oefening 3 ----");
 
         String month = "March";
-        String daysCount = "0";
+        int daysCount = 0;
+
+        switch (month) {
+            case "February":
+                System.out.println(month + " has " + (daysCount + 28) + " days");
+                break;
+            case "April":
+            case "June":
+            case "September":
+            case "November":
+                System.out.println(month + " has " + (daysCount + 30) + " days");
+                break;
+            case "January":
+            case "March":
+            case "May":
+            case "July":
+            case "August":
+            case "October":
+            case "December":
+                System.out.println(month + " has " + (daysCount + 31) + " days");
+                break;
+            default:
+                System.out.println("This month doesn't exist");
+        }
+        System.out.println("---- Oefening 4 ----");
+
+        number = 35;
+
+        System.out.println((number > 0) ? number + " is positief" : number + " is negatief");
+
     }
 }
